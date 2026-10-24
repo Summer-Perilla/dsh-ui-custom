@@ -1,0 +1,59 @@
+{
+  "name": "dsh-ui-custom",
+  "version": "1.0.0",
+  "description": "DSH Web GUI 编辑模式：接管布局列宽，任意元素、组件可自定义，支持调整位置/宽/高/字号/隐藏。可选脱离文档流、吸附对齐，支持多选、批量、撤销、重置。兼容主题插件，允许用户调整元素获得更多空间和自定义个性化界面。",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json"
+  },
+  "license": "MIT",
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "cordis",
+    "plugin",
+    "gui",
+    "layout",
+    "sidebar",
+    "resize",
+    "css"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Summer-Perilla/dsh-ui-custom.git"
+  },
+  "homepage": "https://github.com/Summer-Perilla/dsh-ui-custom#readme",
+  "bugs": {
+    "url": "https://github.com/Summer-Perilla/dsh-ui-custom/issues"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-layout"
+      ]
+    }
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "^4.0.1",
+    "@deepseek-ai/dsh": ">=0.2.0-rc.2 <0.3.0-0"
+  },
+  "peerDependenciesMeta": {
+    "@deepseek-ai/dsh": {
+      "optional": true
+    }
+  },
+  "files": [
+    "lib/index.js",
+    "lib/client.js",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ]
+}

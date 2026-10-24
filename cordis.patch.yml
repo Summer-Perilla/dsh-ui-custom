@@ -1,0 +1,3 @@
+- insert:
+    - id: ui-custom
+      name: 'dsh-ui-custom'
